@@ -7,14 +7,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 // Optionally load environment variables from ../.env if dotenv is available
-let envLoaded = false;
+let envLoaded = true;
 try {
-  const { default: dotenv } = await import('dotenv');
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  dotenv.config({ path: path.resolve(__dirname, '../.env') });
-  envLoaded = true;
-  console.log('✅ Environment variables', { loadedFromDotenv: true });
+    console.log('✅ Environment variables will be loaded from Replit Secrets (process.env)');
 } catch (e) {
   console.warn('ℹ️ dotenv not installed, skipping .env loading. Using process.env/defaults.');
 }
