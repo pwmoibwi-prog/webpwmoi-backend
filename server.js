@@ -15,7 +15,7 @@ try {
 }
 
 // --- Configuration ---
-const PORT = Number(process.env.PORT) || 3001;
+const PORT = Number(process.env.PORT) || 5000;
 const dbConfig = {
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
