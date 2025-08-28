@@ -884,6 +884,14 @@ function runApp() {
     }
   });
 
+  app.get('/', (req, res) => {
+  res.send(`
+    <h1>Backend PWMOI Banyuwangi</h1>
+    <p>✅ Backend sedang berjalan.</p>
+    <p>➡️ API tersedia di: <a href="/api">/api</a></p>
+  `);
+});
+
   // Start listening
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ Full application server running on http://0.0.0.0:${PORT}`);
